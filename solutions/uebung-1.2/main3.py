@@ -9,11 +9,13 @@ Zusatz: Versuchen Sie die Laufzeit des Programms zu optimieren
 prim = True
 n = int(input("Geben Sie eine natürliche Zahl ein: "))
 
+if n==1:
+    print(f"Die Zahl {n} ist keine Primzahl")
 for t in range(2,n):
     if n%t==0:
         prim=False
         print(f"Die Zahl {n} ist keine Primzahl, denn sie hat den nicht-trivialen Teiler {t}.")
         break
 
-if prim:
+if prim and n!=1:
     print(f"Die Zahl {n} ist eine Primzahl")
